@@ -7,5 +7,6 @@ execute_step() {
   pushd $resourcePath
   ansible-playbook $fileName
   popd
+  echo "Executed ansible playbook defined in: $fileName"
 }
 execute_command execute_step
