@@ -1,5 +1,5 @@
 configuration:
-  # resourceName:
-  #   type: GitRepo
+  resourceName:
+    type: GitRepo
   fileName:
     type: String
