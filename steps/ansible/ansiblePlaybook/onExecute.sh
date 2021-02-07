@@ -5,8 +5,10 @@ execute_step() {
   # local resourcePath=$(find_resource_variable $resourceName resourcePath)/$gitRepoName
   # echo "Changing directory: $resourcePath"
   # pushd $resourcePath
+  buildDir=$(find_resource_variable "$inputGitRepoResourceName" resourcePath)
+  pushd $buildDir
   ansible-playbook $fileName
-  # popd
+  popd
   echo "Executed ansible playbook defined in: $fileName"
 }
 execute_command execute_step
